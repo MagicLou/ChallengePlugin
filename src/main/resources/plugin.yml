@@ -1,0 +1,65 @@
+name: ChallengesPluginV2
+version: '${project.version}'
+main: de.magic_lou.challengespluginv2.Main
+api-version: 1.19
+
+load: STARTUP
+
+permissions:
+  Challenges.permissions.leader:
+    default: op
+  Challenges.permissions.mate:
+    default: not op
+
+commands:
+  spectate:
+    description: toggles if player spectates Challenge or not
+  challenge:
+    description: manages Challenges
+    permission: op
+  timer:
+    description: manages RunTime
+    permission: op
+  reset:
+    description: resets world
+    permission: op
+  hardcore:
+    description: allows regeneration
+    permission: op
+  shuffle:
+    description: shuffles Random-Set of Random-Challenge
+    permission: op
+  explosion:
+    description: Toggles if Challenge is triggert by an Explosion
+    permission: op
+  skip:
+    description: Skips Force-Challenge-Request
+    permission: op
+  try:
+    description: Checks Force-Challenge-Request
+    permission: op
+  pickup:
+    description: En-/ Disables to pickup other Items in RandomChestLoot-Challenge
+    permission: op
+  print:
+    description: Tells the Player what Mob they killed or not
+    permission: op
+
+  waypointkill:
+    description: Clears WayPoints of BackPortChallenge
+    permission: not op
+  gui:
+    description: all commands and settings in one inventory
+    permission: op
+
+  invsee:
+    description: Opens a players Inventory
+    permission: op
+
+  position:
+    description: Waypoints for all Players
+    permission: not op
+
+  getChallenge:
+    description: returns all active Challenges
+    permission: not op

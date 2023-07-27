@@ -1,0 +1,17 @@
+
+[
+java:S2637+"EThis method's return value is marked "@NotNull" but null is returned.(¥¹ï
+[
+java:S26375"EThis method's return value is marked "@NotNull" but null is returned.(¥¹ï
+[
+java:S2637T"EThis method's return value is marked "@NotNull" but null is returned.(¥¹ï
+[
+java:S2637"EThis method's return value is marked "@NotNull" but null is returned.(¥¹ï
+[
+java:S2637^"EThis method's return value is marked "@NotNull" but null is returned.(¥¹ï
+G
+java:S1874"1Remove this use of "randomKey"; it is deprecated.(ÂÜ¤ª
+A
+java:S11685"+Return an empty collection instead of null.(¥¹ï
+F
+java:S1874?"+Remove this use of "ALL"; it is deprecated.(°œŒĞşÿÿÿÿ

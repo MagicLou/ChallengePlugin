@@ -1,0 +1,14 @@
+
+i
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(ÍéÌ‘øÿÿÿÿ
+g
+java:S1104"QMake start a static final constant or non-public and provide accessors if needed.(¼ÆéÃ
+e
+java:S1104"OMake end a static final constant or non-public and provide accessors if needed.(¿±Ğì
+g
+java:S1104"QMake timer a static final constant or non-public and provide accessors if needed.(ªÀØ±
+U
+java:S1118":Add a private constructor to hide the implicit public one.(—şÙŒÿÿÿÿÿ
+c	java:S100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÇÀÀ
+V	java:S125)"<This block of commented-out lines of code should be removed.(ñûïÕøÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(ñûïÕøÿÿÿÿ

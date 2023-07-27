@@ -1,0 +1,16 @@
+
+u
+java:S1450"YRemove the "actionTask" field and declare it as a local variable in the relevant methods.(½28àæƒ1
+n
+java:S1450"QRemove the "id" field and declare it as a local variable in the relevant methods.(î¿ÛÜ8¥Ã‰ƒ1
+]	java:S125H"<This block of commented-out lines of code should be removed.(ÖÉş üÿÿÿÿ8«Ã‰ƒ1
+L
+java:S1905Ä")Remove this unnecessary cast to "double".(ÙıĞ•ûÿÿÿÿ8´Ã‰ƒ1
+W
+java:S2864å"4Iterate over the "entrySet" instead of the "keySet".(õ—”Êûÿÿÿÿ8·Ã‰ƒ1
+J
+java:S1068".Remove this unused "actionTask" private field.(½28÷æƒ1
+O
+java:S1144M"-Remove this unused private "startCon" method.(ò²¾®ùÿÿÿÿ8°ö‹ƒ1
+N
+java:S1144S",Remove this unused private "stopCon" method.(Û×èÈşÿÿÿÿ8°ö‹ƒ1
