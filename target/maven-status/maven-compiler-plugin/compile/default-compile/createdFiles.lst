@@ -8,6 +8,7 @@ de\magic_lou\challengespluginv2\achallenges\random\randomblockplace\RandomBlockP
 de\magic_lou\challengespluginv2\achallenges\random\randomblockzumob\RandomBlockZuMob.class
 de\magic_lou\challengespluginv2\achallenges\random\randomeffectonblock\RandomEffectOnBlockChallenge.class
 de\magic_lou\challengespluginv2\challengemanagment\GUI\managment\ChallengeManagerGUI.class
+de\magic_lou\challengespluginv2\utils\UtilsChunk.class
 de\magic_lou\challengespluginv2\achallenges\random\randomchestloot\RandomChestLootChallenge.class
 de\magic_lou\challengespluginv2\achallenges\other\running\Running$1.class
 de\magic_lou\challengespluginv2\datenbank\PositionDataManager.class
@@ -37,6 +38,7 @@ de\magic_lou\challengespluginv2\position\PositionManager.class
 de\magic_lou\challengespluginv2\commands\challengecomands\CommandUtils.class
 de\magic_lou\challengespluginv2\commands\challengecomands\WayPointKillCommand.class
 de\magic_lou\challengespluginv2\utils\Utils$EntityTypeCats.class
+de\magic_lou\challengespluginv2\commands\challengecomands\PlaceCommand.class
 de\magic_lou\challengespluginv2\generators\EmptyChunkGenerator.class
 de\magic_lou\challengespluginv2\Challenge.class
 de\magic_lou\challengespluginv2\challengemanagment\GUI\guis\SettingsGUI.class
@@ -47,6 +49,7 @@ de\magic_lou\challengespluginv2\gravitys\AntiGravity.class
 de\magic_lou\challengespluginv2\position\PositionCommand.class
 de\magic_lou\challengespluginv2\achallenges\random\randomitem\RandomItem.class
 de\magic_lou\challengespluginv2\timer\TimerCommand.class
+de\magic_lou\challengespluginv2\achallenges\other\chunkwalking\ChunkWalkingChallenge.class
 de\magic_lou\challengespluginv2\achallenges\other\chunkbreaking\ChunkBreakingChallenge.class
 de\magic_lou\challengespluginv2\playermanagment\SpectateCommand.class
 de\magic_lou\challengespluginv2\datenbank\RunManager$Run.class
@@ -114,6 +117,7 @@ de\magic_lou\challengespluginv2\achallenges\random\randomentityspawn\RandomEntit
 de\magic_lou\challengespluginv2\achallenges\random\randomeffectondamage\RandomEffectOnDamageChallenge.class
 de\magic_lou\challengespluginv2\gravitys\LowGravity.class
 de\magic_lou\challengespluginv2\achallenges\random\randomeffectondamage\RandomEffectOnDamage$1.class
+de\magic_lou\challengespluginv2\achallenges\other\chunkwalking\ChunkWalking.class
 de\magic_lou\challengespluginv2\gravitys\Gravity.class
 de\magic_lou\challengespluginv2\achallenges\random\randomgravity\RandomGravity.class
 de\magic_lou\challengespluginv2\achallenges\random\randomizer\RandomizerChallenge.class

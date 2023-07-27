@@ -1,9 +1,9 @@
 
 Test:
     ChunkBreaking
+    ChunkWalking
 
 Implement Challenge:
-    ChunkWalking
     IceChallenge
     LevelBorder
     SpeedChallenge

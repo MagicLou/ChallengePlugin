@@ -139,6 +139,9 @@ public class Utils {
         }
         while (loc.getBlock().getType().isAir()) {
             loc.setY(loc.getY() - 1);
+            if(loc.getY()<loc.getWorld().getMinHeight()){
+                setOnGround(loc.add(16,0,0));
+            }
         }
 
         loc.setY(loc.getY() + 1);
