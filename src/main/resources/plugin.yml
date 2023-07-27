@@ -44,6 +44,9 @@ commands:
   print:
     description: Tells the Player what Mob they killed or not
     permission: op
+  place:
+    description: Toggles weather placing block will clear Chunk in ChunkBreaking-Challenge
+    permission: op
 
   waypointkill:
     description: Clears WayPoints of BackPortChallenge

@@ -158,6 +158,7 @@ public final class Main extends JavaPlugin {
         OnExplodeCommand explodeCommand = new OnExplodeCommand(challengeManager);
         PickUpItemCommand pickUpItemCommand = new PickUpItemCommand(challengeManager);
         PrintCommand printCommand = new PrintCommand(challengeManager);
+        PlaceCommand placeCommand = new PlaceCommand(challengeManager);
 
 
         SkipCommand skipCommand = new SkipCommand(challengeManager);
@@ -173,6 +174,7 @@ public final class Main extends JavaPlugin {
         Objects.requireNonNull(Bukkit.getPluginCommand("position")).setTabCompleter(positionCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("hardcore")).setExecutor(hardCoreCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("hardcore")).setTabCompleter(hardCoreCommand);
+
         Objects.requireNonNull(Bukkit.getPluginCommand("shuffle")).setExecutor(shuffleCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("skip")).setExecutor(skipCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("try")).setExecutor(tryCommand);
@@ -181,6 +183,8 @@ public final class Main extends JavaPlugin {
         Objects.requireNonNull(Bukkit.getPluginCommand("explosion")).setExecutor(explodeCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("pickup")).setExecutor(pickUpItemCommand);
         Objects.requireNonNull(Bukkit.getPluginCommand("print")).setExecutor(printCommand);
+        Objects.requireNonNull(Bukkit.getPluginCommand("place")).setExecutor(placeCommand);
+
         Bukkit.getPluginManager().registerEvents(pauseStopListener, this);
         Bukkit.getPluginManager().registerEvents(sessionListener, this);
         Bukkit.getPluginManager().registerEvents(endListener, this);

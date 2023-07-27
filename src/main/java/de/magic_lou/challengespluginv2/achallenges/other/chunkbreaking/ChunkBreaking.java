@@ -2,12 +2,14 @@ package de.magic_lou.challengespluginv2.achallenges.other.chunkbreaking;
 
 import de.magic_lou.challengespluginv2.Challenge;
 import de.magic_lou.challengespluginv2.playermanagment.PlayerManager;
+import de.magic_lou.challengespluginv2.utils.UtilsChunk;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
@@ -16,7 +18,7 @@ import org.bukkit.inventory.ItemStack;
 import java.util.Collection;
 import java.util.Collections;
 
-public class ChunkBreaking {
+public class ChunkBreaking implements Listener {
 
 
     private final PlayerManager playerManager;
@@ -38,6 +40,8 @@ public class ChunkBreaking {
 
     public void setDiff(Challenge.ChallengeDiff diff) {
         this.diff = diff;
+        if(diff.equals(Challenge.ChallengeDiff.EASY)) place = false;
+        else place = true;
     }
 
     @EventHandler
@@ -61,7 +65,10 @@ public class ChunkBreaking {
 
                         if (diff.equals(Challenge.ChallengeDiff.EASY)) {
                             Block blockE = chunk.getBlock(x,y,z);
-                            block.getWorld().dropItemNaturally(block.getLocation(), (ItemStack) blockE.getDrops(tool,player));
+                            if(drops < max) {
+                                block.getWorld().dropItemNaturally(block.getLocation(), (ItemStack) blockE.getDrops(tool, player));
+                                drops++;
+                            }
                             blockE.setType(Material.AIR);
                         } else if (blocktype == chunk.getBlock(x, y, z).getType()) {
                             chunk.getBlock(x, y, z).setType(Material.AIR);
@@ -90,13 +97,7 @@ public class ChunkBreaking {
 
         if (blocktype != Material.BEDROCK) {
             for (int y = event.getBlock().getWorld().getMinHeight(); y < event.getBlock().getWorld().getMaxHeight(); y++) {
-                for (int x = 0; x < 16; x++) {
-                    for (int z = 0; z < 16; z++) {
-                        if (blocktype == chunk.getBlock(x, y, z).getType()) {
-                            chunk.getBlock(x, y, z).setType(Material.AIR);
-                        }
-                    }
-                }
+                UtilsChunk.clear(chunk,diff.equals(Challenge.ChallengeDiff.HARD) ? null : blocktype, y);
             }
         }
     }

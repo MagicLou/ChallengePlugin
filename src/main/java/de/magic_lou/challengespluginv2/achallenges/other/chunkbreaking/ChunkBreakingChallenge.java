@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ChunkBreakingChallenge implements Challenge, Listener {
+public class ChunkBreakingChallenge implements Challenge {
 
 
     private final ChunkBreaking challenge;
@@ -72,11 +72,13 @@ public class ChunkBreakingChallenge implements Challenge, Listener {
     public List<String> getDescription() {
         List<String> d = new ArrayList<>();
         d.add(ChatColor.DARK_PURPLE + "----ChunkBreaking----");
-        d.add(ChatColor.WHITE + "Wenn du einen Block abbaust, baust du ihm im ganzen Chunk ab");
+        d.add(ChatColor.WHITE + "Wenn du einen Block abbaust, baust du ihm im ganzen Chunk ab. OPTIONAL: Wenn du einen Block platzierst passiert das gleiche");
         d.add(ChatColor.GOLD + "Difficulty:");
-        d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Du baust den ganzen Chunk ab");
-        d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Du baust nur den einen BlockTyp ab");
-        d.add(ChatColor.GREEN + "HARD: " + ChatColor.WHITE + "Du bekommst nicht alle abgebauten Blöcke");
+        d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Du baust den ganzen Chunk ab, und kannst normal platzieren");
+        d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Du baust nur den einen BlockTyp ab, beim platzieren wird nur ein BlockTyp gelöscht");
+        d.add(ChatColor.GREEN + "HARD: " + ChatColor.WHITE + "Du bekommst nicht alle abgebauten Blöcke und wenn du einen Block platzierst wird der ganze Chunk gelöscht");
+        d.add(ChatColor.GOLD + "Commands:");
+        d.add(ChatColor.GREEN + "/place: " + ChatColor.WHITE + "Blöcke platzieren löscht nun den Chunk oder nicht");
 
         return d;
     }

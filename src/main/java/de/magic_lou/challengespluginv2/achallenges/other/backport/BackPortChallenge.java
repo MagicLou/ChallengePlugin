@@ -73,6 +73,8 @@ public class BackPortChallenge implements Challenge {
         d.add(ChatColor.WHITE + "Du kannst durch sneaken einen WayPoint erstellen. Wenn du nochmals sneaks wirst du dorthin zurück teleportiert");
         d.add(ChatColor.GOLD + "Difficulty:");
         d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Only Normal Difficulty");
+        d.add(ChatColor.GOLD + "Commands:");
+        d.add(ChatColor.GREEN + "/waypointkill: " + ChatColor.WHITE + "Löscht deinen WayPoint");
 
         return d;
     }

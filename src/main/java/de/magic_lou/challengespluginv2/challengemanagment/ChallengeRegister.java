@@ -15,6 +15,10 @@ import de.magic_lou.challengespluginv2.achallenges.other.backport.BackPort;
 import de.magic_lou.challengespluginv2.achallenges.other.backport.BackPortChallenge;
 import de.magic_lou.challengespluginv2.achallenges.other.chorousfruit.ChorusFruit;
 import de.magic_lou.challengespluginv2.achallenges.other.chorousfruit.ChorusFruitChallenge;
+import de.magic_lou.challengespluginv2.achallenges.other.chunkbreaking.ChunkBreaking;
+import de.magic_lou.challengespluginv2.achallenges.other.chunkbreaking.ChunkBreakingChallenge;
+import de.magic_lou.challengespluginv2.achallenges.other.chunkwalking.ChunkWalking;
+import de.magic_lou.challengespluginv2.achallenges.other.chunkwalking.ChunkWalkingChallenge;
 import de.magic_lou.challengespluginv2.achallenges.other.running.Running;
 import de.magic_lou.challengespluginv2.achallenges.other.running.RunningChallenge;
 import de.magic_lou.challengespluginv2.achallenges.other.yeet.Yeet;
@@ -55,6 +59,7 @@ import de.magic_lou.challengespluginv2.timer.Timer;
 import de.magic_lou.challengespluginv2.utils.UtilsForce;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.checkerframework.checker.units.qual.C;
 
 public class ChallengeRegister {
 
@@ -207,7 +212,20 @@ public class ChallengeRegister {
         ChorusFruitChallenge chorusFruitChallenge = new ChorusFruitChallenge(chorusFruit);
         challengeManager.registerChallenge(chorusFruitChallenge);
 
-//        challengeManager.registerChallenge(new ChunkBreaking())
+        //ChunkBreaking
+        ChunkBreaking chunkBreaking = new ChunkBreaking(playerManager);
+        Bukkit.getPluginManager().registerEvents(chunkBreaking,instance);
+        ChunkBreakingChallenge chunkBreakingChallenge = new ChunkBreakingChallenge(chunkBreaking);
+        challengeManager.registerChallenge(chunkBreakingChallenge);
+
+
+        //ChunkWalking
+        ChunkWalking chunkWalking = new ChunkWalking(playerManager);
+        Bukkit.getPluginManager().registerEvents(chunkWalking,instance);
+        ChunkWalkingChallenge chunkWalkingChallenge = new ChunkWalkingChallenge(chunkWalking);
+        challengeManager.registerChallenge(chunkWalkingChallenge);
+
+
 //        challengeManager.registerChallenge(new ChunkWalking())
 //
 //        challengeManager.registerChallenge(new IceChallenge())

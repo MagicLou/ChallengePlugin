@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ChunkWalkingChallenge  implements Challenge, Listener {
+public class ChunkWalkingChallenge  implements Challenge {
 
 
     private final ChunkWalking challenge;
@@ -100,7 +100,7 @@ public class ChunkWalkingChallenge  implements Challenge, Listener {
 
     @Override
     public Material getItem() {
-        return Material.STONE_PICKAXE;
+        return Material.LEATHER_BOOTS;
     }
 
 
