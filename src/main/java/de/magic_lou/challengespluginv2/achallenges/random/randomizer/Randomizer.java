@@ -24,6 +24,7 @@ public class Randomizer implements Listener {
     private Challenge.ChallengeDiff diff = Challenge.ChallengeDiff.NORMAL;
     private EnumMap<Material, Material> newLoot = new EnumMap<>(Material.class);
     private boolean drops = false;
+    private boolean tools = false;
 
     public Challenge.ChallengeDiff getDiff() {
         return diff;
@@ -42,7 +43,7 @@ public class Randomizer implements Listener {
 
 
     public void shuffle() {
-        newLoot = Utils.getMaterialMap(Utils.MaterialType.BLOCK, Utils.MaterialType.ITEM);
+        newLoot = Utils.getMaterialMap(Utils.MaterialType.ALL, Utils.MaterialType.ITEM);
     }
 
 
@@ -60,8 +61,14 @@ public class Randomizer implements Listener {
             if (!drops)
                 block.getLocation().getWorld().dropItemNaturally(block.getLocation(), new ItemStack(newLoot.get(block.getType())));
             else {
-                for (ItemStack drop : block.getDrops(itemStack)) {
-                    block.getLocation().getWorld().dropItemNaturally(block.getLocation(), new ItemStack(newLoot.get(drop.getType())));
+                if(tools){
+                    for (ItemStack drop : block.getDrops()) {
+                        block.getLocation().getWorld().dropItemNaturally(block.getLocation(), new ItemStack(newLoot.get(drop.getType())));
+                    }
+                }else {
+                    for (ItemStack drop : block.getDrops(itemStack)) {
+                        block.getLocation().getWorld().dropItemNaturally(block.getLocation(), new ItemStack(newLoot.get(drop.getType())));
+                    }
                 }
             }
         }
@@ -87,5 +94,10 @@ public class Randomizer implements Listener {
         for (Block block : event.blockList()) {
             destroy(block, new ItemStack(Material.AIR));
         }
+    }
+
+    public String toggleDrops() {
+        tools = !tools;
+        return tools ? "die von Tools " : "die von Hand";
     }
 }

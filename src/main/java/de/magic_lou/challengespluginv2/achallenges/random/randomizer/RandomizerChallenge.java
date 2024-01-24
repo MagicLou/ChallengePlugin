@@ -47,7 +47,7 @@ public class RandomizerChallenge implements Challenge {
 
     @Override
     public List<String> getMethods() {
-        return Arrays.asList("shuffle", "Shuffles the Random-Set", "toggleItem", "toggles weather the randomItem is from the BlockType or its Drops");
+        return Arrays.asList("shuffle", "Shuffles the Random-Set", "toggleItem", "toggles weather the randomItem is from the BlockType or its Drops","toggleDrop", "toggles weather the Item Drops as destroyed with used or with Tool ");
     }
 
     @Override
@@ -58,6 +58,9 @@ public class RandomizerChallenge implements Challenge {
         }
         if (methode.equals("toggleItem")) {
             player.sendMessage(ChatColor.WHITE + "Es werden nun die " + ChatColor.GOLD + challenge.toggle() + ChatColor.WHITE + " randomized");
+        }
+        if (methode.equals("toggleDrop")) {
+            player.sendMessage(ChatColor.WHITE + "Es werden nun die " + ChatColor.GOLD + challenge.toggleDrops() + ChatColor.WHITE + " randomized");
         }
     }
 
@@ -80,6 +83,7 @@ public class RandomizerChallenge implements Challenge {
         d.add(ChatColor.GOLD + "Commands:");
         d.add(ChatColor.GREEN + "/shuffle: " + ChatColor.WHITE + "Allen Blöcken werden neuen Items zugeordnet");
         d.add(ChatColor.GREEN + "/toggleItem: " + ChatColor.WHITE + "Toggle ob der Block randomized wird oder seine Drops");
+        d.add(ChatColor.GREEN + "/toggleDrop: " + ChatColor.WHITE + "Toggle ob der Block mit dem auswählten Item oder einem Tool zerstört wurde");
         return d;
     }
 

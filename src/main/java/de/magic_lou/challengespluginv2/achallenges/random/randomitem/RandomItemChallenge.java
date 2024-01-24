@@ -74,7 +74,7 @@ public class RandomItemChallenge implements Challenge {
         List<String> d = new ArrayList<>();
         d.add(ChatColor.DARK_PURPLE + "----RandomItem----");
         d.add(ChatColor.WHITE + "Bekomme in bestimmten Zeitabständen neue Items. Zu Beginn besteht die Welt aus einem Bedrock-Block");
-        d.add(ChatColor.WHITE + "Um deine Welt zu resetten musst du /reset verwenden oder ds GUI-Inventar");
+        d.add(ChatColor.WHITE + "Um deine Welt zu resetten musst du /reset verwenden oder das GUI-Inventar");
         d.add(ChatColor.GOLD + "Difficulty:");
         d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Alle 10 Sekunden ein neues Item");
         d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Jede Minute ein neues Item");

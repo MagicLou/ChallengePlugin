@@ -72,7 +72,7 @@ public class ChunkBreakingChallenge implements Challenge {
     public List<String> getDescription() {
         List<String> d = new ArrayList<>();
         d.add(ChatColor.DARK_PURPLE + "----ChunkBreaking----");
-        d.add(ChatColor.WHITE + "Wenn du einen Block abbaust, baust du ihm im ganzen Chunk ab. OPTIONAL: Wenn du einen Block platzierst passiert das gleiche");
+        d.add(ChatColor.WHITE + "Wenn du einen Block abbaust, baust du ihn im ganzen Chunk ab. OPTIONAL: Wenn du einen Block platzierst passiert das gleiche");
         d.add(ChatColor.GOLD + "Difficulty:");
         d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Du baust den ganzen Chunk ab, und kannst normal platzieren");
         d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Du baust nur den einen BlockTyp ab, beim platzieren wird nur ein BlockTyp gelöscht");

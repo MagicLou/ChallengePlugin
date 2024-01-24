@@ -71,7 +71,7 @@ public class RandomBlockPlaceChallenge implements Challenge {
     public List<String> getDescription() {
         List<String> d = new ArrayList<>();
         d.add(ChatColor.DARK_PURPLE + "----RandomBlockPlace----");
-        d.add(ChatColor.WHITE + "Statt dem Block der normalerweise platziert wird, wird ein zufälliger platziert");
+        d.add(ChatColor.WHITE + "Statt des platzierten Blockes wird ein zufälliger platziert");
         d.add(ChatColor.GOLD + "Difficulty:");
         d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Jeder Block hat seinen Block der platziert wird");
         d.add(ChatColor.GREEN + "HARD: " + ChatColor.WHITE + "Es ist jedes mal ein neuer Block der platziert wird");

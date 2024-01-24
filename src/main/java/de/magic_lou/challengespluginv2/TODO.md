@@ -1,17 +1,31 @@
-
 Test:
     ChunkBreaking
     ChunkWalking
+    RandomEffectOnBlock fail
+    ForceBiom Es muss sich nur ein Spieler im Biom befinden
 
 Implement Challenge:
     IceChallenge
     LevelBorder
     SpeedChallenge
     VampireChallenge
+    no-up
+    no-down
+    schlagenReihenfolge
+
+Einheitlich dt ODER en
+
+
+
+shift Description-stuff in extern File
+
+HeftDings
+    fertig
+    items
 
 help inv
 
-difficulty in GUI-inv
+mc difficulty in GUI-inv
 
 randomChallenge
 TheBrainFRandomizer

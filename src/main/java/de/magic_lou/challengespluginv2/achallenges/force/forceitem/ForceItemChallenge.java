@@ -45,7 +45,7 @@ public class ForceItemChallenge implements Challenge {
     }
 
     public List<String> getMethods() {
-        return Arrays.asList("skip", "generates new Block", "try", "checks the request now");
+        return Arrays.asList("skip", "generates new Item", "try", "checks the request now");
     }
 
     @Override

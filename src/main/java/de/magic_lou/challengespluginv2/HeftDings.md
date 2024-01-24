@@ -1,0 +1,186 @@
+__Force__
+- Es werden alle paar Minuten von Challenge zu Challenge unterschiedliche Anweisungen gestellt, die es zu befolgen gibt
+- Je nach Aufgabe muss die sie in vorgegebener Zeit erledigt werden
+- Allgemeine Befehle:
+  - skip: Die Aufgabe wird durch eine andere ersetzt
+  - try: Das Ende der Aufgabe wird vorgezogen und überprüft, ob die Aufgabe erfüllt ist
+- Challenges:
+  - ForceBiom
+    - Die Spieler müssen sich im vorgegebenen Biom befinden
+    - Difficulties:
+      - EASY: Es werden gleich-warme Biomes vorgegeben
+      - NORMAL: Es werden Biomes der gleichen Welt vorgegeben
+      - HARD: Es können alle Biomes vorgegeben werden
+  - ForceBlock
+    - Die Spieler müssen auf dem vorgegebenen Block stehen
+    - Difficulties:
+      - EASY: Es muss nur einer auf dem Block stehen
+      - NORMAL: Jeder muss auf dem Block stehen
+      - HARD: Es können unmögliche Blöcke (z.B. CommandBlock) vorgegeben werden
+  - ForceHeight
+    - Die Spieler müssen auf dem vorgegebenen Block stehen
+    - Difficulties:
+      - EASY: Es muss nur einer auf der Höhe stehen
+      - NORMAL: Jeder muss auf der Höhe stehen
+      - HARD: Es können unmögliche Höhen (z.B. Nether: Y=320) vorgegeben werden
+  - ForceItem
+    - Die Spieler müssen das vorgegebene Item einsammeln
+    - Difficulties:
+      - EASY: Es muss nur einer das Item haben
+      - NORMAL: Jeder muss das Item haben
+      - HARD: Es können unmögliche Items (z.B. CommandBlock) vorgegeben werden
+  - ForceMob
+    - Die Spieler müssen das vorgegebene Mob töten
+    - Difficulties:
+      - EASY: Es muss nur einer das Mob töten
+      - NORMAL: Jeder muss das Mob töten
+      - HARD: Es können unmögliche Mobs (z.B. Shulker) vorgegeben werden
+
+__Random__
+- Es werden bestimmte Dinge miteinander vertauscht, wie z.B. Blockdrops
+- Mögliche Commands:
+  - shuffle: Die Dinge werden neu zugeordnet
+- Challenges:
+  - RandomBlockLook:
+    - Der Block, den du anschaust, wird zufällig geändert
+    - Difficulties:
+      - EASY: Der Block ändert sich nur, wenn du ihn neu anschaust
+      - NORMAL: Der Block ändert sich nicht wenn du sneakst
+      - HARD: Der Block ändert sich alle 1/20sec
+  - RandomBlockPlace:
+    - Statt des platzierten Blockes wird ein zufälliger platziert
+    - Difficulties:
+      - NORMAL: Es wird für jeden Blocktyp je ein anderer Blocktyp platziert
+      - HARD: Es wird jedes Mal ein zufälliger Blocktyp platziert
+    - Commands: shuffle
+  - RandomBlockZuMob:
+    - Wenn du einen Block abbaust spawnt ein zufälliger Mob, der den Block dropt
+    - Difficulties:
+      - EASY: Du musst den Mob nicht töten, um an das Item zu kommen
+      - NORMAL: Es spawnt für jeden Blocktyp je ein anderer Mob, den du töten musst
+      - HARD: Es spawnt jedes Mal ein zufälliger Mob, den du töten musst
+    - Commands: shuffle
+  - RandomChallenge:
+    - Es wird eine zufällige Challenge ausgewählt
+  - RandomChestLoot:
+    - Jede Truhe enthält zufällige Items
+    - Difficulties:
+      - EASY: Es sind mehr zufällige Items enthalten
+      - NORMAL: In jeder Truhe werden die ItemTypen vertauscht
+      - HARD: Die vertauschten ItemTypen sind allgemein gültig
+    - Commands: shuffle, pickup
+      - pickup: Toggle, ob du zusätzlich auch andere Items aufheben kannst
+  - RandomCrafting:
+    - Die Rezepte führen zu neuen Items
+    - Difficulties:
+      - NORMAL: Jedes Rezept führt zu einem neuen Item
+      - HARD: Jedes craften führt zu einem zufälligen Item
+    - Commands: shuffle
+  - RandomEffectOnBlock:
+    - Auf jedem Block bekommst du einen zufälligen Effekt
+    - Difficulties:
+      - EASY: Es sind nur positive Effekte möglich
+      - NORMAL: Es sind alle Effekte möglich, und auf jedem Blocktyp gibt es einen anderen Effekt
+      - HARD: Es sind alle Effekte möglich, und auf jedem Block gibt es einen anderen Effekt
+    - Commands: shuffle
+  - RandomEffectOnDamage:
+    - Wenn du Schaden nimmst bekommst du einen zufälligen Effekt
+    - Difficulties:
+      - EASY: Es sind nur positive Effekte möglich
+      - NORMAL: Tödliche Effekte wie Wither sind nicht möglich
+      - HARD: Es sind alle Effekte möglich
+  - RandomEntitySpawn:
+    - Es spawnen statt der normalen Entities zufällige Entities
+    - Difficulties:
+      - NORMAL: Es spawnen für jede Entity je eine andere Entity
+      - HARD: Es spawnen jedes Mal zufällige Entities
+    - Commands: shuffle
+  - RandomEntitySpawnOnKill:
+    - Wenn du ein Mob tötest, spawnt ein zufälliger Mob
+    - Difficulties:
+      - NORMAL: Es spawnen für jeden Mob je ein anderer Mob
+      - HARD: Es spawnen jedes Mal zufällige Mobs
+    - Commands: shuffle
+  - RandomGravity:
+    - Es herrscht zufällige Gravitation, die sich nach einiger Zeit ändern
+    - Difficulties:
+      - EASY: Die Gravitation ändert sich maximal alle 10 Minuten
+      - NORMAL: Die Gravitation ändert sich maximal alle 5 Minuten
+      - HARD: Die Gravitation ändert sich maximal jede Minuten
+    - Commands: randomize
+      - randomize: Die Gravitation wird geändert
+  - RandomInventory:
+    - Die Items in deinem Inventar werden zufällig geändert
+    - Difficulties:
+      - EASY: Es wird alle 5-7 Minuten geändert
+      - NORMAL: Es wird alle 3-5 Minuten geändert, jedes Item bekommt ein neues Item zugeordnet
+      - HARD: Es wird alle 3-5 Minuten geändert, jedes Item bekommt ein neues Item zugeordnet
+    - Commands: shuffle
+  - RandomItem:
+    - Du bekommst in bestimmten Zeitintervallen ein zufälliges Item
+    - Die Welt besteht zu Beginn aus einem einzigen Bedrock-Block
+    - Difficulties:
+      - EASY: Du bekommst alle 10 Sekunden ein neues Item
+      - NORMAL: Du bekommst jede Minute ein neues Item
+      - HARD: Du bekommst alle 5 Minuten ein neues Item
+  - Randomizer:
+    - Jeder Block dropped ein zufälliges Item
+    - Difficulties:
+      - EASY: Es wird zusätzlich zum normalen Item ein zufälliges Item gedroppt
+      - NORMAL: Jeder Blocktyp dropped ein anderes Item
+      - HARD: Jeder Block dropped ein zufälliges Item
+    - Commands: shuffle, toggleItem, toggleDrop
+      - toggleItem: Toggle, ob der Blocktyp oder seine Drops gedroppt werden
+      - toggleDrop: Toggle, ob der Block mit der Hand oder mit dem richtigen Werkzeug abgebaut wurde
+  - RandomMobDrop:
+    - Jeder Mob dropped ein zufälliges Item
+    - Difficulties:
+      - EASY: Es wird zusätzlich zum normalen Item ein zufälliges Item gedroppt
+      - NORMAL: Jeder Mob dropped ein anderes Item
+      - HARD: Jeder Mob dropped ein zufälliges Item
+    - Commands: shuffle
+  - RandomMobLoot:
+    - Jeder Mob dropped den Loot eines anderen Mobs
+    - Difficulties:
+      - EASY: Es wird zusätzlich zum normalen Item ein zufälliges Item gedroppt
+      - NORMAL: Jeder Mob dropped den Loot eines anderen Mobs
+      - HARD: Jeder Mob dropped den Loot eines zufälligen Mobs
+    - Commands: shuffle
+__Other__
+  - Challenges:
+    - BackPort:
+      - Durch sneaken kannst du ein Waypoint erstellt werden, an den du dich durch erneutes sneaken zurückportieren kannst
+      - Difficulties:
+        - NORMAL: Normal only
+    - ChorousFruit:
+      - Durch essen wirst du random teleportiert
+      - Difficulties:
+        - EASY: kleiner Radius
+        - NORMAL: solider Radius
+        - HARD: großer Radius
+    - ChunkBreaking:
+      - Wenn du einen Block abbaust, baust du ihn im ganzen Chunk ab. OPTIONAL: Wenn du einen Block platzierst passiert das gleiche
+      - Difficulties:
+        - EASY: Du baust den ganzen Chunk ab, und kannst normal platzieren 
+        - NORMAL: Du baust nur den einen BlockTyp ab, beim Platzieren wird nur ein BlockTyp gelöscht
+        - HARD: Du bekommst nicht alle abgebauten Blöcke und wenn du einen Block platzierst, wird der ganze Chunk gelöscht
+      - Commands: place
+        - place: Toggle, ob beim Platzieren der Chunk gelöscht wird
+    - ChunkWalking:
+      - Wenn du dich bewegst, wird der Blocktyp, auf dem du stehst im ganzen Chunk entfernt
+      - Difficulties:
+        - EASY: Es werden nur Blöcke über dir entfernt
+        - NORMAL: Es wird der Blocktyp, auf dem du stehst im ganzen Chunk entfernt
+        - HARD: Es wird der ganze Chunk entfernt
+    - Running:
+      - Du kannst nicht stehen bleiben
+      - Difficulties:
+        - EASY: Du gehst du ganze Zeit
+        - NORMAL: Du läufst die ganze Zeit
+        - HARD: Du rennst die ganze Zeit
+    - Yeet:
+      - Du wirst in eine zufällige Richtung geyeeetet
+      - Difficulties:
+        - EASY: kleines Yeet
+        - NORMAL: solides Yeet
+        - HARD: großes Yeet

@@ -66,9 +66,9 @@ public class RandomBlockLookChallenge implements Challenge {
     public List<String> getDescription() {
         List<String> d = new ArrayList<>();
         d.add(ChatColor.DARK_PURPLE + "----RandomBlockLook----");
-        d.add(ChatColor.WHITE + "Der Block den du anschaust wird zufällig geändert");
+        d.add(ChatColor.WHITE + "Der Block, den du anschaust, wird zufällig geändert");
         d.add(ChatColor.GOLD + "Difficulty:");
-        d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Der Block ändert sich nur wenn du ihn neu anschaust");
+        d.add(ChatColor.GREEN + "EASY: " + ChatColor.WHITE + "Der Block ändert sich nur, wenn du ihn neu anschaust");
         d.add(ChatColor.GREEN + "NORMAL: " + ChatColor.WHITE + "Der Block ändert sich nicht wenn du sneakst");
         d.add(ChatColor.GREEN + "HARD: " + ChatColor.WHITE + "Der Block ändert sich alle 1/20sec");
         return d;
